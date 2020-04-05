@@ -44,4 +44,10 @@
     <string name="btnISIngresar">Ingresar</string>
     <string name="btnISCrearCuenta">Crear cuenta</string>
 
+    <!--Promociones-->
+    <string name="lblPSTituloPromociones">Lista de productos en promoción</string>
+
+    <!--Registrar pedido-->
+    <string name="lblRPTituloRegistrarPedido">Nuevo Pedido</string>
+
 </resources>

@@ -18,36 +18,36 @@
             android:title="@string/menu_slideshow" />-->
         <item
             android:id="@+id/nav_registrarpedido"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_nuevo_pedido"
             android:title="@string/menu_registrarpedido" />
         <item
             android:id="@+id/nav_mispedidos"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_mis_pedidos"
             android:title="@string/menu_mispedidos" />
         <item
             android:id="@+id/nav_productos"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_producto"
             android:title="@string/menu_productos" />
         <item
             android:id="@+id/nav_promociones"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_promocion"
             android:title="@string/menu_promociones" />
         <item
             android:id="@+id/nav_zonasatencion"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_zonas_atencion"
             android:title="@string/menu_zonasatencion" />
         <item
             android:id="@+id/nav_miperfil"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_mi_perfil"
             android:title="@string/menu_miperfil" />
 
         <item
             android:id="@+id/nav_iniciarsesion"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_iniciar_sesion"
             android:title="@string/menu_iniciarsesion" />
         <item
             android:id="@+id/nav_cerrarsesion"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@mipmap/img_menu_cerrar_sesion"
             android:title="@string/menu_cerrarsesion" />
     </group>
 </menu>

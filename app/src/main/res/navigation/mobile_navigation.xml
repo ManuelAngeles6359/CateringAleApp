@@ -48,6 +48,12 @@
         tools:layout="@layout/registrar_pedido_fragment" />
 
     <fragment
+        android:id="@+id/nav_promociones"
+        android:name="com.example.cateringaleapp.ui.promociones.PromocionesFragment"
+        android:label="@string/menu_promociones"
+        tools:layout="@layout/promociones_fragment" />
+
+    <fragment
         android:id="@+id/nav_zonasatencion"
         android:name="com.example.cateringaleapp.ui.zonasatencion.ZonasAtencionFragment"
         android:label="@string/menu_zonasatencion"
