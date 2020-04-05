@@ -48,9 +48,21 @@
         tools:layout="@layout/registrar_pedido_fragment" />
 
     <fragment
+        android:id="@+id/nav_zonasatencion"
+        android:name="com.example.cateringaleapp.ui.zonasatencion.ZonasAtencionFragment"
+        android:label="@string/menu_zonasatencion"
+        tools:layout="@layout/zonas_atencion_fragment" />
+
+    <fragment
         android:id="@+id/nav_miperfil"
         android:name="com.example.cateringaleapp.ui.miperfil.MiPerfilFragment"
         android:label="@string/menu_miperfil"
         tools:layout="@layout/mi_perfil_fragment" />
+
+    <fragment
+        android:id="@+id/nav_iniciarsesion"
+        android:name="com.example.cateringaleapp.ui.iniciarsesion.IniciarSesion"
+        android:label="@string/menu_iniciarsesion"
+        tools:layout="@layout/iniciar_sesion_fragment" />
 
 </navigation>

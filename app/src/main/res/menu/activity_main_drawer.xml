@@ -40,6 +40,11 @@
             android:id="@+id/nav_miperfil"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_miperfil" />
+
+        <item
+            android:id="@+id/nav_iniciarsesion"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_iniciarsesion" />
         <item
             android:id="@+id/nav_cerrarsesion"
             android:icon="@drawable/ic_menu_slideshow"
