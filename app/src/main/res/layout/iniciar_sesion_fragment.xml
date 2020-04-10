@@ -8,61 +8,82 @@
 
     <TextView
         android:id="@+id/lblISUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="125dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
         android:layout_marginTop="32dp"
         android:text="@string/lblISUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/lblISTitulo"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblISTitulo" />
 
     <EditText
         android:id="@+id/txtISUsuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="351dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/lblISUsuario"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblISUsuario" />
 
     <TextView
         android:id="@+id/lblISContraseña"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
         android:layout_marginTop="28dp"
         android:text="@string/lblISContraseña"
-        app:layout_constraintTop_toBottomOf="@+id/txtISUsuario"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtISUsuario" />
 
     <EditText
         android:id="@+id/txtISContraseña"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="348dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/lblISContraseña"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblISContraseña" />
 
     <Button
         android:id="@+id/btnISCrearCuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="342dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:text="@string/btnISCrearCuenta"
-        app:layout_constraintStart_toEndOf="@+id/btnISIngresar"
-        app:layout_constraintTop_toBottomOf="@+id/txtISContraseña" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnISIngresar" />
 
     <Button
         android:id="@+id/btnISIngresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="341dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
         android:text="@string/btnISIngresar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtISContraseña" />
 
@@ -77,4 +98,5 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"
         android:gravity="center_horizontal" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
