@@ -16,18 +16,18 @@
             app:destination="@id/nav_home_second" />
     </fragment>
     <fragment
-        android:id="@+id/nav_home_second"
-        android:name="com.example.cateringaleapp.ui.home.HomeSecondFragment"
-        android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
-        <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />
+    android:id="@+id/nav_home_second"
+    android:name="com.example.cateringaleapp.ui.home.HomeSecondFragment"
+    android:label="@string/home_second"
+    tools:layout="@layout/fragment_home_second">
+    <action
+        android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+        app:destination="@id/nav_home" />
 
-        <argument
-            android:name="myArg"
-            app:argType="string" />
-    </fragment>
+    <argument
+        android:name="myArg"
+        app:argType="string" />
+</fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -48,10 +48,17 @@
         tools:layout="@layout/registrar_pedido_fragment" />
 
     <fragment
+        android:id="@+id/nav_productos"
+        android:name="com.example.cateringaleapp.ui.productos.ProductoFragment"
+        android:label="@string/menu_productos"
+        tools:layout="@layout/fragment_producto" />
+
+<!--
+    <fragment
         android:id="@+id/nav_promociones"
         android:name="com.example.cateringaleapp.ui.promociones.PromocionesFragment"
         android:label="@string/menu_promociones"
-        tools:layout="@layout/promociones_fragment" />
+        tools:layout="@layout/promociones_fragment" />-->
 
     <fragment
         android:id="@+id/nav_zonasatencion"
@@ -63,12 +70,12 @@
         android:id="@+id/nav_miperfil"
         android:name="com.example.cateringaleapp.ui.miperfil.MiPerfilFragment"
         android:label="@string/menu_miperfil"
-        tools:layout="@layout/mi_perfil_fragment" />
+        tools:layout="@layout/fragment_mi_perfil" />
 
     <fragment
-        android:id="@+id/nav_iniciarsesion"
-        android:name="com.example.cateringaleapp.ui.iniciarsesion.IniciarSesion"
+        android:id="@+id/nav_cerrarsesion"
+        android:name="com.example.cateringaleapp.ui.cerrarsesion.CerrarSesionFragment"
         android:label="@string/menu_iniciarsesion"
-        tools:layout="@layout/iniciar_sesion_fragment" />
+        tools:layout="@layout/cerrar_sesion_fragment" />
 
 </navigation>

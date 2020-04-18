@@ -23,14 +23,18 @@
     <string name="menu_iniciarsesion">Iniciar sesión</string>
     <string name="menu_cerrarsesion">Cerrar sesión</string>
 
-    <!--Registrar usuario-->
-    <string name="lblRegistrarUsuario">Perfil del Usuario</string>
+    <!--Registrar cuenta-->
+    <string name="lblRegistrarCuenta">Datos del Usuario</string>
     <string name="lblNombre">Nombre completo</string>
     <string name="lblCorreo">Correo</string>
     <string name="lblContraseña">Contraseña</string>
     <string name="lblTelefono">Teléfono</string>
     <string name="lblDireccion">Dirección</string>
-    <string name="btnRegistrarUsuario">Crear cuenta</string>
+    <string name="btnRegistrarCuenta">Crear cuenta</string>
+
+    <!--Registrar cuenta-->
+    <string name="lblActualizarCuenta">Perfil de Usuario</string>
+    <string name="btnActualizarCuenta">Actualizar perfil</string>
 
 
     <!--Zonas de venta-->
@@ -49,5 +53,8 @@
 
     <!--Registrar pedido-->
     <string name="lblRPTituloRegistrarPedido">Nuevo Pedido</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

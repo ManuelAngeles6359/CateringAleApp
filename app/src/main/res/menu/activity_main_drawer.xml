@@ -15,11 +15,11 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />-->
+            android:title="@string/menu_slideshow" />
         <item
             android:id="@+id/nav_registrarpedido"
             android:icon="@mipmap/img_menu_nuevo_pedido"
-            android:title="@string/menu_registrarpedido" />
+            android:title="@string/menu_registrarpedido" />-->
         <item
             android:id="@+id/nav_mispedidos"
             android:icon="@mipmap/img_menu_mis_pedidos"
@@ -28,10 +28,10 @@
             android:id="@+id/nav_productos"
             android:icon="@mipmap/img_menu_producto"
             android:title="@string/menu_productos" />
-        <item
+        <!--<item
             android:id="@+id/nav_promociones"
             android:icon="@mipmap/img_menu_promocion"
-            android:title="@string/menu_promociones" />
+            android:title="@string/menu_promociones" />-->
         <item
             android:id="@+id/nav_zonasatencion"
             android:icon="@mipmap/img_menu_zonas_atencion"
@@ -41,10 +41,10 @@
             android:icon="@mipmap/img_menu_mi_perfil"
             android:title="@string/menu_miperfil" />
 
-        <item
+        <!--<item
             android:id="@+id/nav_iniciarsesion"
             android:icon="@mipmap/img_menu_iniciar_sesion"
-            android:title="@string/menu_iniciarsesion" />
+            android:title="@string/menu_iniciarsesion" />-->
         <item
             android:id="@+id/nav_cerrarsesion"
             android:icon="@mipmap/img_menu_cerrar_sesion"
