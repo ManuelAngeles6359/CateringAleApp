@@ -99,53 +99,13 @@ public class ProductoFragment extends Fragment {
                 }
         );
         RequestQueue requestQueue= Volley.newRequestQueue(ctx);
-        requestQueue.add(stringRequest);/*
-
-        //productoAdapter = new ProductoAdapter(getActivity(),ListaProducto);
-        //lvProducto.setAdapter(productoAdapter);*/
-
-        /*Producto pro0 = new Producto();
-        Producto pro1 = new Producto();
-        Producto pro2 = new Producto();
-        Producto pro3 = new Producto();
-        Producto pro4 = new Producto();
-
-        pro0.setNombre("Torta de chocolate");
-        pro0.setPrecio((float) 90);
-        pro0.setEnPromocion ("No");
-
-        pro1.setNombre("Tiramisú");
-        pro1.setPrecio((float) 45);
-        pro1.setEnPromocion ("Si");
-
-        pro2.setNombre("Milhojas");
-        pro2.setPrecio((float) 75);
-        pro2.setEnPromocion ("Si");
-
-        pro3.setNombre("Alfajores");
-        pro3.setPrecio((float) 60);
-        pro3.setEnPromocion ("No");
-
-        pro4.setNombre("Crepe");
-        pro4.setPrecio((float) 35);
-        pro4.setEnPromocion ("Si");
-
-        final List<Producto> ListaProducto = new ArrayList<>();
-        ListaProducto.add(pro0);
-        ListaProducto.add(pro1);
-        ListaProducto.add(pro2);
-        ListaProducto.add(pro3);
-        ListaProducto.add(pro4);
-
-        productoAdapter = new ProductoAdapter(getActivity(),ListaProducto);
-        lvProducto.setAdapter(productoAdapter);*/
+        requestQueue.add(stringRequest);
 
         lvProducto.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent detalle = new Intent(view.getContext(), DetalleProducto.class);
-                //String desc = parent.getSelectedItem().toString();
                 Producto prod = ListaProducto.get(position);
                 String nombre = prod.getNombre();
                 String descripcion = prod.getDescripcion();
@@ -154,7 +114,6 @@ public class ProductoFragment extends Fragment {
                 detalle.putExtra("nombre", nombre);
                 detalle.putExtra("precio", precio);
                 startActivity(detalle);
-                //Toast.makeText(getActivity(),"Clic en producto",Toast.LENGTH_SHORT).show();
             }
         });
 
