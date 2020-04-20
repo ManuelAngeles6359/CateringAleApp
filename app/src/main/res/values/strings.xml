@@ -15,7 +15,7 @@
 
     <!--Menus-->
     <string name="menu_registrarpedido">Registrar pedido</string>
-    <string name="menu_mispedidos">Mis pedido</string>
+    <string name="menu_mispedidos">Mis pedidos</string>
     <string name="menu_productos">Productos</string>
     <string name="menu_promociones">Promociones</string>
     <string name="menu_zonasatencion">Zonas de atención</string>

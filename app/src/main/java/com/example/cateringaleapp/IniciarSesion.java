@@ -55,11 +55,6 @@ public class IniciarSesion extends AppCompatActivity {
 
         String url = "http://catteringale.onlinewebshop.net/index.php/usuario/"+usuario;
 
-        //--------------------------------------------------------------------------------
-        //--------------------------------------------------------------------------------
-        //--------------------------------------------------------------------------------
-        //--------------------------------------------------------------------------------
-
         if(usuario.isEmpty()){
             faltanDatos = true;
             txtUsuario.setError("Dato requerido.");
