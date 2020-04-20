@@ -39,9 +39,6 @@ public class CrearCuenta extends AppCompatActivity {
         txtContraseña = (EditText) findViewById(R.id.txtContraseña);
         txtApMat = (EditText) findViewById(R.id.txtApMat);
         txtApPat = (EditText) findViewById(R.id.txtApPat);
-        /*txtTelefono = (EditText) findViewById(R.id.txtTelefono);
-        txtDireccion = (EditText) findViewById(R.id.txtDireccion);*/
-
     }
 
 
