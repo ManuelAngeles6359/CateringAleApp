@@ -42,21 +42,23 @@ public class IniciarSesion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iniciar_sesion);
 
-
         btnIngresar =  (Button) findViewById(R.id.btnISIngresar);
         txtUsuario = (EditText) findViewById(R.id.txtISUsuario);
         txtContraseña = (EditText) findViewById(R.id.txtISContraseña);
-
-
     }
 
 
     public void ValidarCredenciales(View view){
-
         boolean faltanDatos = false;
         String usuario = txtUsuario.getText().toString();
-        String contraseña = txtContraseña.getText().toString();
+        final String contraseña = txtContraseña.getText().toString();
 
+        String url = "http://catteringale.onlinewebshop.net/index.php/usuario/"+usuario;
+
+        //--------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------
+        //--------------------------------------------------------------------------------
 
         if(usuario.isEmpty()){
             faltanDatos = true;
@@ -73,19 +75,61 @@ public class IniciarSesion extends AppCompatActivity {
             txtContraseña.setError(null);
         }
 
-
         if(faltanDatos){
 
             Toast.makeText(this,"Favor de completar los datos requeridos.",Toast.LENGTH_LONG).show();
 
         }else{
+            StringRequest stringRequest= new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        boolean tieneAcceso;
+                        JSONArray jsonArray = new JSONArray(response);
+                        Log.i("======>", jsonArray.toString());
 
-            Intent anterior = new Intent(this,MainActivity.class);
-            startActivity(anterior);
+                        String clave = new String();
+                        List<String> items = new ArrayList<>();
+                        for (int i=0; i<jsonArray.length(); i++){
+                            JSONObject object = jsonArray.getJSONObject(i);
+                            //items.add(object.getString("nombre") + " (S/. "+object.getString("precio")+") ");
+                            clave = object.getString("clave");
+                        }
+
+                        if (contraseña.equals(clave)) {
+                            tieneAcceso = true;
+                            concederAcceso(tieneAcceso);
+                        } else {
+                            tieneAcceso = false;
+                            concederAcceso(tieneAcceso);
+                        }
+
+                    } catch (JSONException e) {
+                        Log.i("======>", e.getMessage());
+                    }
+                }
+            },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.i("======>", error.toString());
+                        }
+                    }
+            );
+            RequestQueue requestQueue= Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
 
         }
+    }
 
+    public void concederAcceso(boolean tieneAcceso) {
 
+        if (tieneAcceso) {
+            Intent anterior = new Intent(this, MainActivity.class);
+            startActivity(anterior);
+        } else {
+            Toast.makeText(this,"Los datos ingresados son incorrectos",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void CrearCuenta(View view){
@@ -94,7 +138,5 @@ public class IniciarSesion extends AppCompatActivity {
         startActivity(anterior);
 
     }
-
-
 
 }

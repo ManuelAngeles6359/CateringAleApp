@@ -5,6 +5,7 @@ public class Producto {
     private String Nombre;
     private Float Precio;
     private String EnPromocion;
+    private String Descripcion;
 
     public String getNombre() {
         return Nombre;
@@ -28,6 +29,14 @@ public class Producto {
 
     public void setEnPromocion(String enPromocion) {
         EnPromocion = enPromocion;
+    }
+
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
     }
 
 

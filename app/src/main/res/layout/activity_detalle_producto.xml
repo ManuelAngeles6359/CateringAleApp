@@ -8,14 +8,15 @@
 
     <TextView
         android:id="@+id/lblDPTitulo"
-        android:layout_width="247dp"
-        android:layout_height="21dp"
+        android:layout_width="288dp"
+        android:layout_height="35dp"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
-        android:text="Nombre del producto"
+        android:gravity="center"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,20 +34,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblDPTitulo"
         app:srcCompat="@mipmap/logo" />
-
-    <TextView
-        android:id="@+id/lblDPDescripcion"
-        android:layout_width="323dp"
-        android:layout_height="78dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginRight="45dp"
-        android:text="Descripción del producto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgDPImagen" />
 
     <TextView
         android:id="@+id/textView3"
@@ -98,4 +85,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnDPAñadirAPedido" />
+
+    <TextView
+        android:id="@+id/lblDPDescripcion"
+        android:layout_width="328dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDPImagen" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
