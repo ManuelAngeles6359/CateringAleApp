@@ -72,6 +72,7 @@ public class ProductoFragment extends Fragment {
                         producto.setNombre(object.getString("nombre"));
                         producto.setPrecio(Float.parseFloat(object.getString("precio")));
                         producto.setDescripcion(object.getString("descripcion"));
+                        producto.setRutaImagen(object.getString("rutaimagen"));
 
                         if (object.getString("enpromocion").equals("S")) {
                             producto.setEnPromocion("Sí");
@@ -110,9 +111,12 @@ public class ProductoFragment extends Fragment {
                 String nombre = prod.getNombre();
                 String descripcion = prod.getDescripcion();
                 Float precio = prod.getPrecio();
+                String rutaImagen = prod.getRutaImagen();
                 detalle.putExtra("descripcion", descripcion);
                 detalle.putExtra("nombre", nombre);
                 detalle.putExtra("precio", precio);
+                detalle.putExtra("rutaImagen", rutaImagen);
+                Log.i("======>", rutaImagen);
                 startActivity(detalle);
             }
         });

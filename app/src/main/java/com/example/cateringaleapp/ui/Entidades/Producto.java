@@ -6,6 +6,15 @@ public class Producto {
     private Float Precio;
     private String EnPromocion;
     private String Descripcion;
+    private String RutaImagen;
+
+    public String getRutaImagen() {
+        return RutaImagen;
+    }
+
+    public void setRutaImagen(String rutaImagen) {
+        RutaImagen = rutaImagen;
+    }
 
     public String getNombre() {
         return Nombre;
