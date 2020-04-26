@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetalleProducto"></activity>
+        <activity android:name=".ui.nuevoPedido.NuevoPedido"></activity>
+        <activity android:name=".DetalleProducto" />
         <activity android:name=".CrearCuenta" />
         <activity android:name=".IniciarSesion">
             <intent-filter>

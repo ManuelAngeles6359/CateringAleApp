@@ -22,6 +22,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.cateringaleapp.ui.Entidades.Global;
+import com.example.cateringaleapp.ui.Entidades.Pedido;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -84,15 +86,23 @@ public class IniciarSesion extends AppCompatActivity {
                         Log.i("======>", jsonArray.toString());
 
                         String clave = new String();
+                        Integer codigoUsuario = 0;
+                        String nombreUsuario = "";
                         List<String> items = new ArrayList<>();
                         for (int i=0; i<jsonArray.length(); i++){
                             JSONObject object = jsonArray.getJSONObject(i);
                             //items.add(object.getString("nombre") + " (S/. "+object.getString("precio")+") ");
+                            codigoUsuario = object.getInt("idUsuario");
                             clave = object.getString("clave");
+                            nombreUsuario = object.getString("nombres") + " " + object.getString("paterno");
                         }
 
                         if (contraseña.equals(clave)) {
                             tieneAcceso = true;
+                            Pedido.IniciarDetallePedido();
+                            Pedido.setIdUsuario(codigoUsuario);
+                            Pedido.setIdPedido(0);
+                            Global.nombresUsuario = nombreUsuario;
                             concederAcceso(tieneAcceso);
                         } else {
                             tieneAcceso = false;

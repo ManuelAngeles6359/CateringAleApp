@@ -69,6 +69,7 @@ public class ProductoFragment extends Fragment {
 
                     for (int i=0; i<jsonArray.length(); i++){
                         JSONObject object = jsonArray.getJSONObject(i);
+                        producto.setIdProducto(object.getInt("idProducto"));
                         producto.setNombre(object.getString("nombre"));
                         producto.setPrecio(Float.parseFloat(object.getString("precio")));
                         producto.setDescripcion(object.getString("descripcion"));
@@ -108,10 +109,14 @@ public class ProductoFragment extends Fragment {
 
                 Intent detalle = new Intent(view.getContext(), DetalleProducto.class);
                 Producto prod = ListaProducto.get(position);
+
+                Integer codigoProducto = prod.getIdProducto();
                 String nombre = prod.getNombre();
                 String descripcion = prod.getDescripcion();
                 Float precio = prod.getPrecio();
                 String rutaImagen = prod.getRutaImagen();
+
+                detalle.putExtra("codigoProducto",codigoProducto);
                 detalle.putExtra("descripcion", descripcion);
                 detalle.putExtra("nombre", nombre);
                 detalle.putExtra("precio", precio);

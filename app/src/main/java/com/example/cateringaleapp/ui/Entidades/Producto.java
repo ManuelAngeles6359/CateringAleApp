@@ -2,11 +2,20 @@ package com.example.cateringaleapp.ui.Entidades;
 
 public class Producto {
 
+    private Integer IdProducto;
     private String Nombre;
     private Float Precio;
     private String EnPromocion;
     private String Descripcion;
     private String RutaImagen;
+
+    public Integer getIdProducto() {
+        return IdProducto;
+    }
+
+    public void setIdProducto(Integer idProducto) {
+        IdProducto = idProducto;
+    }
 
     public String getRutaImagen() {
         return RutaImagen;
