@@ -62,7 +62,7 @@
 
     <fragment
         android:id="@+id/nav_zonasatencion"
-        android:name="com.example.cateringaleapp.ui.zonasatencion.ZonasAtencionFragment"
+        android:name="com.example.cateringaleapp.ZonasAtencion"
         android:label="@string/menu_zonasatencion"
         tools:layout="@layout/zonas_atencion_fragment" />
 

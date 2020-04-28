@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.cateringaleapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,6 +15,19 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".ui.nuevoPedido.NuevoPedido"></activity>
         <activity android:name=".DetalleProducto" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value=" my_channel_id_01" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAvZGaJr8c0MuSLn_8P15ZPIgMQUcn041o" />
+
+        <activity android:name=".DetalleProducto"
+            tools:ignore="DuplicateActivity"></activity>
         <activity android:name=".CrearCuenta" />
         <activity android:name=".IniciarSesion">
             <intent-filter>

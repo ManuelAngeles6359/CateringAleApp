@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "829608502176",
+    "firebase_url": "https://catteringale.firebaseio.com",
+    "project_id": "catteringale",
+    "storage_bucket": "catteringale.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829608502176:android:60504f30c11b163beb7ac5",
+        "android_client_info": {
+          "package_name": "com.example.cateringaleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829608502176-b0spq9c7rj02m2h4hstvd0fchu6p92ll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHvFw3_VX5bjRRAV2iV1Enfgd-DQ3PzRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829608502176-b0spq9c7rj02m2h4hstvd0fchu6p92ll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
