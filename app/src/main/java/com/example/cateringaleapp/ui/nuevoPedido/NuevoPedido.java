@@ -125,12 +125,12 @@ public class NuevoPedido extends AppCompatActivity {
         if(!CamposObligatoriosComepletos()){
             return;
         }
-
+/*
         for (int i=0; i<Pedido.getListaDeProductos().size(); i++) {
             Log.i("======>", (String.valueOf(i).toString()));
             Log.i("======>", Pedido.getListaDeProductos().get(i).getNombre());
         }
-
+*/
         String url = "http://catteringale.onlinewebshop.net/index.php/insertarPedido";
 
         StringRequest stringRequest= new StringRequest(Request.Method.POST, url,
@@ -145,7 +145,7 @@ public class NuevoPedido extends AppCompatActivity {
                             RegistrarDetalleDePedido();
                             txtNPNumeroPedido.setText(Pedido.getIdPedido().toString());
                             Toast.makeText(NuevoPedido.this,"Pedido registrado correctamente.",Toast.LENGTH_LONG).show();
-                            IniciarNuevoPedido();
+                            //
                         } catch (Exception e) {
                             Log.i("======>", e.getMessage());
                         }
@@ -184,18 +184,25 @@ public class NuevoPedido extends AppCompatActivity {
 
     public void RegistrarDetalleDePedido(){
 
+
+
         String url = "http://catteringale.onlinewebshop.net/index.php/insertarDetallePedido";
 
         for (int i = 0; i<Pedido.getListaDeProductos().size(); i++) {
 
-            final int posicion = i;
+
+            final int finalI = i;
             final StringRequest stringRequest= new StringRequest(Request.Method.POST, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             try {
 
-                                Log.i("======>", "Detalle registrado correctamente." + String.valueOf(posicion));
+                                Log.i("======>", "Detalle registrado correctamente." + String.valueOf(finalI));
+
+                                if(Pedido.getListaDeProductos().size()-1 == finalI){
+                                    IniciarNuevoPedido();
+                                }
 
 
                             } catch (Exception e) {
@@ -213,11 +220,12 @@ public class NuevoPedido extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() {
                     //$id_pedido, $id_producto, $precio, $cantidad
+                    Log.i("======>", "Indice." + String.valueOf(finalI));
                     Map<String, String> params = new HashMap();
                     params.put("id_pedido", Pedido.getIdPedido().toString());
-                    params.put("id_producto", Pedido.getListaDeProductos().get(posicion).getIdProducto().toString());
-                    params.put("precio", Pedido.getListaDeProductos().get(posicion).getPrecio().toString());
-                    params.put("cantidad", Pedido.getListaDeProductos().get(posicion).getCantidad().toString());
+                    params.put("id_producto", Pedido.getListaDeProductos().get(finalI).getIdProducto().toString());
+                    params.put("precio", Pedido.getListaDeProductos().get(finalI).getPrecio().toString());
+                    params.put("cantidad", Pedido.getListaDeProductos().get(finalI).getCantidad().toString());
                     return params;
                 }
             };
